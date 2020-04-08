@@ -1,0 +1,17 @@
+body{
+    background: linear-gradient(135deg, rgba(0, 35, 151, 1) 0%, rgba(0, 178, 198, 1) 100%);
+}
+
+.card-box{
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 20px;
+    width: 50%;
+    margin: auto;
+}
+
+@media only screen and (max-width: 998px) {
+    .card-box{
+        width: 100%;
+    }
+}
