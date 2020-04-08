@@ -20,7 +20,7 @@ Route::get('/', function () {
 Route::group(['middleware' => ['auth']], function () {
     Route::get('/home', 'LoginController@index' ,function () {
         return view('pages.home');
-    });
+    })->name('home');
     Route::get('/logout', 'LoginController@logout')->name('logout');
 });
 

@@ -5,18 +5,18 @@
             <span class="navbar-toggler-icon"></span>
         </button>
         <!-- Brand -->
-        {{-- <a class="navbar-brand pt-0" href="{{ route('ativos') }}">
-            <img src="{{ asset('argon') }}/img/brand/genius.png" class="navbar-brand-img" alt="...">
-        </a> --}}
+        <a class="navbar-brand pt-0" href="{{ route('home') }}">
+            <img src="{{ asset('argon') }}/img/15671091409758.png" class="navbar-brand-img" alt="...">
+        </a>
         <!-- Collapse -->
         <div class="collapse navbar-collapse" id="sidenav-collapse-main">
             <div class="navbar-collapse-header d-md-none">
                 <div class="row">
-                    {{-- <div class="col-6 collapse-brand">
-                        <a href="{{ route('ativos') }}">
-                            <img src="{{ asset('argon') }}/img/brand/genius.png">
+                    <div class="col-6 collapse-brand">
+                        <a href="{{ route('home') }}">
+                            <img src="{{ asset('argon') }}/img/15671091409758.png" alt="...">
                         </a>
-                    </div> --}}
+                    </div>
                     <div class="col-6 collapse-close">
                         <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#sidenav-collapse-main" aria-controls="sidenav-main" aria-expanded="true" aria-label="Toggle sidenav">
                             <span></span>
@@ -29,11 +29,8 @@
                 <div class="card-body pt-0 pb-0">
                     <div class="text-center">
                         <h5 class="h4">
-                            {{-- {{Session::get('cliente')['fantasia']}} --}}
+                           <b>Nome:</b> {{ ucfirst(strtolower( Auth::user()['name']))}}
                         </h5>
-                        <div class="h5 font-weight-300">
-                            {{-- <i class="ni location_pin mr-2"></i>{{Session::get('cliente')['doc']}} --}}
-                        </div>
                     </div>
                 </div>
             </div>
@@ -41,7 +38,7 @@
             <!-- Navigation -->
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link" href="">
+                    <a class="nav-link" href="{{ route('home') }}">
                         <i class="ni ni-atom text-orange"></i> {{ __('Grid') }}
                     </a>
                 </li>
